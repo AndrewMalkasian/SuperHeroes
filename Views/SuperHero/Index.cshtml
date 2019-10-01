@@ -1,0 +1,64 @@
+﻿@model IEnumerable<SuperHeroes.Models.SuperHero>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AlterEgoFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlterEgoLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SuperHeroName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryAbility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondaryAbility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CatchPhrase)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlterEgoFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlterEgoLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuperHeroName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryAbility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecondaryAbility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CatchPhrase)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,67 @@
+﻿@model SuperHeroes.Models.SuperHero
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SuperHero</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AlterEgoFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlterEgoFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlterEgoLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlterEgoLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuperHeroName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuperHeroName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CatchPhrase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CatchPhrase)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
